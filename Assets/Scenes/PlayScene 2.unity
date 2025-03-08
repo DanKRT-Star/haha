@@ -303,9 +303,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScore1: 1000
+<<<<<<< HEAD
   targetScore2: 500
   targetScore3: 500
   targetScore4: 500
+=======
+  targetScore2: 2000
+  targetScore3: 3000
+  targetScore4: 4000
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
   targetScore5: 5000
   scene1: PlayScene
   scene2: PlayScene 1

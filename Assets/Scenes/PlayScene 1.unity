@@ -2156,8 +2156,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d4e0ceeb31ec741b7434034c6630af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   targetScore1: 500
   targetScore2: 500
+=======
+  targetScore1: 1000
+  targetScore2: 2000
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
   targetScore3: 3000
   targetScore4: 4000
   targetScore5: 5000

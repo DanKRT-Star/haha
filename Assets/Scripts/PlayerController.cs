@@ -12,7 +12,11 @@ public class PlayerController : MonoBehaviour
     public GameManager HP;
 
     public float currentHP;
+<<<<<<< HEAD
     public float maxHP = 20;
+=======
+    public float maxHP = 10;
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
     public float speed;
 
     private bool isDead;
@@ -71,6 +75,7 @@ public class PlayerController : MonoBehaviour
         transform.position = pos;
     }
 
+<<<<<<< HEAD
 
 
     void OnTriggerEnter2D(Collider2D col)
@@ -89,6 +94,23 @@ public class PlayerController : MonoBehaviour
     
 
 
+=======
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "EnemyShipTag" || col.tag == "EnemyBulletTag")
+        {
+            PlayExplosion();
+            currentHP -= 2;
+            HP.UpdateHP(currentHP, maxHP);
+            if (currentHP <= 0 && !isDead)
+            {
+                isDead = true;
+                gameOver.Over();
+                Destroy(gameObject);
+            }
+        }
+
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
         // Xử lý khi va chạm với thiên thạch (Meteor)
         if (col.tag == "Meteor")
         {
@@ -102,6 +124,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
+=======
+    // 🛠 Di chuyển phương thức này ra ngoài OnTriggerEnter2D
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
     IEnumerator FreezePlayer(float duration)
     {
         Debug.Log("Bắt đầu đóng băng Player trong " + duration + " giây");
@@ -111,6 +137,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Player có thể di chuyển lại");
     }
 
+<<<<<<< HEAD
     public void TakeDamage(float damage)
     {
         currentHP -= damage;
@@ -123,6 +150,11 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+=======
+
+
+
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
 
     void PlayExplosion()
     {

@@ -6,11 +6,16 @@ using TMPro; // Thêm thư viện TMP
 
 public class GameScore : MonoBehaviour
 {
+<<<<<<< HEAD
     public static GameScore instance; // 🔹 Biến instance để gọi từ bất kỳ đâu
 
     TMP_Text scoreTextUI; // Sử dụng TMP_Text thay vì Text
     int score;
 
+=======
+    TMP_Text scoreTextUI; // Sử dụng TMP_Text thay vì Text
+    int score;
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
     public int targetScore1 = 1000;
     public int targetScore2 = 2000;
     public int targetScore3 = 3000;
@@ -34,6 +39,7 @@ public class GameScore : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
     void Awake()
     {
         // 🔹 Đảm bảo chỉ có 1 instance của GameScore
@@ -47,6 +53,8 @@ public class GameScore : MonoBehaviour
         }
     }
 
+=======
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
     void Start()
     {
         scoreTextUI = GameObject.Find("ScoreText").GetComponent<TMP_Text>();
@@ -95,6 +103,7 @@ public class GameScore : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+<<<<<<< HEAD
 
     // 🔹 Thêm hàm này để cập nhật điểm số khi Boss bị bắn
     public void AddScore(int amount)
@@ -102,3 +111,7 @@ public class GameScore : MonoBehaviour
         Score += amount;
     }
 }
+=======
+}
+
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0

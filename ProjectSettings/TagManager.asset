@@ -13,7 +13,10 @@ TagManager:
   - Bullet
   - Meteor
   - Meteor2
+<<<<<<< HEAD
   - Boss
+=======
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
   layers:
   - Default
   - TransparentFX

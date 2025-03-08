@@ -8,9 +8,15 @@ using UnityEditor;
 
 public class GameManager : MonoBehaviour
 {
+<<<<<<< HEAD
     public GameObject gameOver;  // UI Game Over
     public Image ImageHP;  // Thanh máu
     public GameObject scoreUITextGO; // UI điểm số
+=======
+    public GameObject gameOver;
+    public Image ImageHP;
+    public GameObject scoreUITextGO;
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
 
     public RectTransform countdownPanel; // Thanh ngang mở rộng
     public Image countdownImage;
@@ -27,7 +33,11 @@ public class GameManager : MonoBehaviour
 
         // Hiệu ứng mở rộng thanh ngang
         float duration = 0.5f;
+<<<<<<< HEAD
         float targetHeight = 300f;
+=======
+        float targetHeight = 300f; // Độ cao của thanh ngang sau khi mở rộng
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)
@@ -63,16 +73,20 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("⚠ Lỗi: ImageHP chưa được gán trong GameManager!");
         }
+<<<<<<< HEAD
 
         // Kiểm tra nếu máu hết thì dừng game
         if (currentHP <= 0)
         {
             Over();
         }
+=======
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
     }
 
     public void Over()
     {
+<<<<<<< HEAD
         Time.timeScale = 0f; // Dừng toàn bộ game
         if (gameOver != null)
         {
@@ -82,10 +96,15 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("⚠ Lỗi: gameOver UI chưa được gán trong GameManager!");
         }
+=======
+        gameOver.SetActive(true);
+        Time.timeScale = 0f;
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
     }
 
     public void restart()
     {
+<<<<<<< HEAD
         Time.timeScale = 1f; // Reset thời gian trước khi restart
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
@@ -98,6 +117,11 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("⚠ Lỗi: scoreUITextGO chưa được gán trong GameManager!");
         }
+=======
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        scoreUITextGO.GetComponent<GameScore>().Score = 0;
+>>>>>>> 1774e338774e96cf4dd5fcc0363d666d03cef8a0
     }
 
     public void quit()
